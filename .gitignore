@@ -13,3 +13,6 @@ $RECYCLE.BIN/
 *.njsproj
 *.sln
 *.swp
+
+# Local Server Script
+server.js
