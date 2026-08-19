@@ -1619,3 +1619,10 @@ input, textarea, select {
   white-space: nowrap;
   border-width: 0;
 }
+
+/* Extra small viewport optimizations */
+@media (max-width: 375px) {
+  .logo-subtitle {
+    display: none !important;
+  }
+}
