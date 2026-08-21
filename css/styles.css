@@ -109,7 +109,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -766,7 +766,6 @@ input, textarea, select {
 .ciyne-layout-grid {
   display: grid;
   gap: var(--space-64);
-  align-items: flex-start;
 }
 
 @media (min-width: 1024px) {
