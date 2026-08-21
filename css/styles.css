@@ -696,8 +696,6 @@ input, textarea, select {
 }
 
 @media (max-width: 1024px) {
-  .hero-visual {
-@media (max-width: 1024px) {
   .hero-collage {
     margin-left: 0;
     margin: var(--space-32) auto 0;
