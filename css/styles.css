@@ -793,7 +793,7 @@ input, textarea, select {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-64);
-  align-items: center;
+  align-items: flex-start;
 }
 
 .about-steps {
