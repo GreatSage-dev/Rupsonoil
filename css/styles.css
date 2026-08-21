@@ -313,45 +313,49 @@ input, textarea, select {
 }
 
 /* ==========================================================================
-   2. Base Components
+   Buttons
    ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-16) var(--space-32);
-  border-radius: 9999px; /* Lovable pill shape */
-  font-weight: var(--font-weight-semibold);
+  padding: var(--space-12) var(--space-24);
   font-size: var(--font-size-body);
-  transition: all var(--duration-normal) var(--ease-spring);
-  cursor: pointer;
+  font-weight: var(--font-weight-semibold);
+  border-radius: 8px; /* Premium corporate radius */
+  transition: all var(--duration-normal) var(--ease-out);
   text-decoration: none;
+  cursor: pointer;
   border: none;
-  gap: var(--space-8);
 }
 
 .btn-primary {
-  background-color: var(--color-accent);
+  background-color: var(--color-primary);
+  background-image: linear-gradient(to bottom, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: var(--color-text-inverted);
-  box-shadow: 0 4px 14px rgba(196, 60, 44, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+  border: 1px solid var(--color-primary-dark);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(196, 60, 44, 0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+  color: var(--color-text-inverted);
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), 0 8px 16px rgba(21, 94, 50, 0.15), 0 2px 4px rgba(21, 94, 50, 0.1);
 }
 
 .btn-outline {
   background-color: var(--color-surface);
   color: var(--color-text-primary);
-  border: 1px solid var(--color-border);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid #E2E8F0;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .btn-outline:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  border-color: var(--color-text-tertiary);
+  color: var(--color-text-primary);
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 8px 16px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
+  border-color: #CBD5E1;
 }
 
 .btn-accent {
@@ -859,11 +863,11 @@ input, textarea, select {
 
 .feature-card {
   background-color: #FEF9F6;
-  border-radius: var(--radius-xl);
-  padding: var(--space-40);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.02);
-  transition: transform var(--duration-normal) var(--ease-spring), box-shadow var(--duration-normal) var(--ease-spring);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
   overflow: hidden;
   height: 100%;
   display: flex;
@@ -872,9 +876,10 @@ input, textarea, select {
 }
 
 .feature-card:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 24px 48px rgba(21, 94, 50, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(21, 94, 50, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
 }
+
 
 .card-decor {
   position: absolute;
@@ -883,11 +888,11 @@ input, textarea, select {
   pointer-events: none;
   z-index: 0;
   opacity: 0.85;
-  transition: transform var(--duration-normal) var(--ease-spring);
+  transition: transform var(--duration-normal) var(--ease-out);
 }
 
 .feature-card:hover .card-decor {
-  transform: scale(1.1) translate(4px, -4px) rotate(3deg);
+  transform: scale(1.06) translate(3px, -3px);
 }
 
 .feature-icon {
