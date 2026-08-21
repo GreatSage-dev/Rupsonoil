@@ -604,21 +604,35 @@ input, textarea, select {
 
 .trust-item {
   display: flex;
-  align-items: center;
-  gap: var(--space-10);
+  align-items: flex-start;
+  gap: var(--space-12);
   font-size: var(--font-size-caption);
   color: var(--color-text-secondary);
-  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+}
+
+.trust-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .trust-item strong {
   color: var(--color-text-primary);
   font-weight: var(--font-weight-semibold);
+  font-size: 13px;
+}
+
+.trust-item span {
+  font-size: 12px;
 }
 
 .trust-item svg {
   flex-shrink: 0;
-  opacity: 0.85;
+  opacity: 0.9;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
 }
 
 .hero-visual {
