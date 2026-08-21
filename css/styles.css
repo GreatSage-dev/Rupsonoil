@@ -858,14 +858,6 @@ input, textarea, select {
   box-shadow: 0 20px 40px rgba(21, 94, 50, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-/* Colored left border stripe per card */
-.feature-card.card-green { border-left: 4px solid var(--color-primary); }
-.feature-card.card-gold { border-left: 4px solid var(--color-gold); }
-.feature-card.card-blue { border-left: 4px solid var(--color-blue); }
-.feature-card.card-purple { border-left: 4px solid var(--color-purple); }
-.feature-card.card-red { border-left: 4px solid var(--color-accent); }
-.feature-card.card-teal { border-left: 4px solid var(--color-teal); }
-.feature-card.card-pink { border-left: 4px solid #E11D48; }
 
 .card-decor {
   position: absolute;
