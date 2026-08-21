@@ -19,10 +19,10 @@
   --color-purple-light: #F3E8FF;
   --color-teal: #0D9488;
   --color-teal-light: #E6FFFA;
-  --color-bg: #FEFCF9;
-  --color-bg-warm: #FFFEF9;
-  --color-bg-green-tint: #EFF8F2;
-  --color-bg-amber-tint: #FFF9F0;
+  --color-bg: #FFFFFF;
+  --color-bg-warm: #FFFFFF;
+  --color-bg-green-tint: #FFFFFF;
+  --color-bg-amber-tint: #FFFFFF;
   --color-surface: #FFFFFF;
   --color-surface-card: #FAFAF7;
   --color-text-primary: #111827;
@@ -563,7 +563,7 @@ input, textarea, select {
   padding-bottom: var(--space-96);
   position: relative;
   overflow: hidden;
-  background: linear-gradient(160deg, #F4FAF6 0%, #FEFCF9 55%, #FFFEF9 100%);
+  background-color: #FFFFFF;
 }
 
 .hero-grid {
