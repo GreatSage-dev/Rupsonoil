@@ -866,11 +866,11 @@ input, textarea, select {
 }
 
 .feature-card {
-  background-color: #FFFDFB;
+  background-color: #FEF9F6;
   border-radius: var(--radius-lg);
   padding: var(--space-32);
   position: relative;
-  border: 1px solid rgba(21, 94, 50, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.03);
   transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
   overflow: hidden;
   height: 100%;
