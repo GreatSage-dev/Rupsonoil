@@ -35,51 +35,53 @@
   --font-size-caption: 14px;
   --font-size-body: 16px;
   --font-size-large-body: 18px;
-  --font-size-h6: 18px;
-  --font-size-h5: 22px;
-  --font-size-h4: 28px;
-  --font-size-h3: 36px;
-  --font-size-h2: 48px;
-  --font-size-h1: 64px;
+  --font-size-h5: 20px;
+  --font-size-h4: 24px;
+  --font-size-h3: 32px;
+  --font-size-h2: 40px;
+  --font-size-h1: 56px;
+
+  --line-height-body: 1.6;
+  --line-height-heading: 1.2;
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
 
-  /* Spacing Scale */
+  /* Spacing Scale (8px base) */
   --space-4: 4px;
   --space-8: 8px;
   --space-12: 12px;
   --space-16: 16px;
+  --space-20: 20px;
   --space-24: 24px;
   --space-32: 32px;
   --space-40: 40px;
   --space-48: 48px;
+  --space-56: 56px;
   --space-64: 64px;
   --space-80: 80px;
   --space-96: 96px;
   --space-120: 120px;
 
-  /* Borders & Shadows */
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
-  
-  /* Ultra-modern soft layered shadows */
-  --shadow-xs: 0 2px 4px rgba(0,0,0,0.02);
-  --shadow-sm: 0 4px 12px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.02);
-  --shadow-md: 0 12px 32px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
-  --shadow-lg: 0 24px 64px rgba(0,0,0,0.06), 0 8px 16px rgba(0,0,0,0.03);
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
 
-  /* Modern Spring Transitions */
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.10);
+
+  /* Transitions */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-spring: cubic-bezier(0.25, 1.2, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --duration-fast: 200ms;
-  --duration-normal: 400ms;
-  --duration-slow: 700ms;
+  --duration-normal: 350ms;
+  --duration-slow: 600ms;
 }
 
 /* ==========================================================================
@@ -112,17 +114,16 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-primary);
-  line-height: 1.15;
-  font-weight: var(--font-weight-extrabold);
-  letter-spacing: -0.03em;
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-16);
 }
 
-h1 { font-size: var(--font-size-h1); letter-spacing: -0.04em; }
-h2 { font-size: var(--font-size-h2); letter-spacing: -0.035em; }
+h1 { font-size: var(--font-size-h1); letter-spacing: -0.02em; }
+h2 { font-size: var(--font-size-h2); letter-spacing: -0.01em; }
 h3 { font-size: var(--font-size-h3); }
 h4 { font-size: var(--font-size-h4); }
-h5 { font-size: var(--font-size-h5); letter-spacing: -0.02em; }
-h6 { font-size: var(--font-size-h6); letter-spacing: -0.01em; }
+h5 { font-size: var(--font-size-h5); }
 
 p {
   color: var(--color-text-secondary);
@@ -295,12 +296,10 @@ input, textarea, select {
 
 /* Gradient text accent for section headings */
 .heading-accent {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-gold) 100%);
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gold-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  display: inline-block;
-  padding-bottom: 0.1em;
 }
 
 /* Colored section divider line */
@@ -561,32 +560,6 @@ input, textarea, select {
   position: relative;
   overflow: hidden;
   background-color: #FFFFFF;
-}
-
-.hero-section::before,
-.hero-section::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  z-index: 0;
-  pointer-events: none;
-}
-
-.hero-section::before {
-  top: -10%;
-  left: -10%;
-  width: 50%;
-  height: 60%;
-  background: radial-gradient(circle, rgba(21, 94, 50, 0.05) 0%, rgba(21, 94, 50, 0) 70%);
-}
-
-.hero-section::after {
-  bottom: -10%;
-  right: -10%;
-  width: 60%;
-  height: 60%;
-  background: radial-gradient(circle, rgba(212, 148, 10, 0.05) 0%, rgba(212, 148, 10, 0) 70%);
 }
 
 .hero-grid {
