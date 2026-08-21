@@ -6,11 +6,23 @@
   --color-primary-dark: #0B3D1F;
   --color-primary-light: #E8F5EC;
   --color-primary-subtle: #F0F9F3;
+  --color-primary-vivid: #1A7A42;
   --color-accent: #C43C2C;
   --color-accent-dark: #9E2F22;
   --color-accent-light: #FEF0ED;
+  --color-gold: #D4940A;
+  --color-gold-light: #FFF8E7;
+  --color-gold-dark: #A67508;
+  --color-blue: #4F46E5;
+  --color-blue-light: #EEF2FF;
+  --color-purple: #7C3AED;
+  --color-purple-light: #F3E8FF;
+  --color-teal: #0D9488;
+  --color-teal-light: #E6FFFA;
   --color-bg: #FEFCF9;
   --color-bg-warm: #FFFEF9;
+  --color-bg-green-tint: #EFF8F2;
+  --color-bg-amber-tint: #FFF9F0;
   --color-surface: #FFFFFF;
   --color-surface-card: #FAFAF7;
   --color-text-primary: #111827;
@@ -178,6 +190,14 @@ input, textarea, select {
   background-color: var(--color-surface);
 }
 
+.section-bg-green-tint {
+  background-color: var(--color-bg-green-tint);
+}
+
+.section-bg-amber-tint {
+  background-color: var(--color-bg-amber-tint);
+}
+
 /* ==========================================================================
    SCROLL REVEAL ANIMATION SYSTEM
    ========================================================================== */
@@ -243,9 +263,9 @@ input, textarea, select {
   position: absolute;
   top: -10%;
   right: -10%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(21,94,50,0.06) 0%, rgba(21,94,50,0) 70%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(21,94,50,0.12) 0%, rgba(212,148,10,0.06) 50%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
   pointer-events: none;
@@ -258,9 +278,9 @@ input, textarea, select {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(21,94,50,0.08) 1px, transparent 1px);
   background-size: 24px 24px;
-  opacity: 0.4;
+  opacity: 0.5;
   z-index: 0;
   pointer-events: none;
 }
@@ -276,6 +296,23 @@ input, textarea, select {
   border-radius: 50%;
   z-index: 0;
   pointer-events: none;
+}
+
+/* Gradient text accent for section headings */
+.heading-accent {
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Colored section divider line */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-gold));
+  border-radius: 2px;
+  margin: 0 auto var(--space-24);
 }
 
 /* ==========================================================================
@@ -341,13 +378,14 @@ input, textarea, select {
 
 .badge-pill {
   display: inline-block;
-  padding: var(--space-4) var(--space-12);
+  padding: var(--space-4) var(--space-16);
   background-color: var(--color-primary-light);
   color: var(--color-primary-dark);
   border-radius: 9999px;
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-semibold);
   margin-bottom: var(--space-16);
+  border-left: 3px solid var(--color-primary);
 }
 
 /* ==========================================================================
@@ -512,6 +550,7 @@ input, textarea, select {
   padding-bottom: var(--space-96);
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #EFF8F2 0%, #FEFCF9 35%, #FFF9F0 70%, #FFF8E7 100%);
 }
 
 .hero-grid {
@@ -752,7 +791,7 @@ input, textarea, select {
   top: 32px;
   bottom: -8px;
   width: 2px;
-  background-color: var(--color-border);
+  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-gold) 100%);
 }
 
 .about-step:last-child::before {
@@ -763,10 +802,10 @@ input, textarea, select {
   position: absolute;
   left: -32px;
   top: 0;
-  color: var(--color-accent);
+  color: var(--color-gold-dark);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-large-body);
-  background-color: var(--color-surface);
+  background-color: var(--color-bg-warm);
   padding: var(--space-4) 0;
   transition: transform var(--duration-normal) var(--ease-out), color var(--duration-normal) var(--ease-out);
 }
@@ -816,8 +855,17 @@ input, textarea, select {
 
 .feature-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(21, 94, 50, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 20px 40px rgba(21, 94, 50, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
 }
+
+/* Colored left border stripe per card */
+.feature-card.card-green { border-left: 4px solid var(--color-primary); }
+.feature-card.card-gold { border-left: 4px solid var(--color-gold); }
+.feature-card.card-blue { border-left: 4px solid var(--color-blue); }
+.feature-card.card-purple { border-left: 4px solid var(--color-purple); }
+.feature-card.card-red { border-left: 4px solid var(--color-accent); }
+.feature-card.card-teal { border-left: 4px solid var(--color-teal); }
+.feature-card.card-pink { border-left: 4px solid #E11D48; }
 
 .card-decor {
   position: absolute;
@@ -847,15 +895,38 @@ input, textarea, select {
   color: var(--color-accent);
 }
 
-/* Color palettes for product/service icons (Unified to Rust Red) */
-.feature-icon.icon-peach,
-.feature-icon.icon-green,
-.feature-icon.icon-purple,
-.feature-icon.icon-pink,
-.feature-icon.icon-yellow,
-.feature-icon.icon-teal {
-  background-color: #FDF2EC;
+/* Distinct color palettes for each product/service icon */
+.feature-icon.icon-peach {
+  background-color: #FEF0ED;
   color: var(--color-accent);
+}
+.feature-icon.icon-green {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+.feature-icon.icon-gold {
+  background-color: var(--color-gold-light);
+  color: var(--color-gold);
+}
+.feature-icon.icon-purple {
+  background-color: var(--color-purple-light);
+  color: var(--color-purple);
+}
+.feature-icon.icon-pink {
+  background-color: #FCE4E7;
+  color: #E11D48;
+}
+.feature-icon.icon-yellow {
+  background-color: var(--color-gold-light);
+  color: var(--color-gold-dark);
+}
+.feature-icon.icon-teal {
+  background-color: var(--color-teal-light);
+  color: var(--color-teal);
+}
+.feature-icon.icon-blue {
+  background-color: var(--color-blue-light);
+  color: var(--color-blue);
 }
 
 .feature-title {
@@ -905,24 +976,33 @@ input, textarea, select {
 .industry-icon-wrapper {
   width: 64px;
   height: 64px;
-  background-color: #FDF2EC;
+  background-color: var(--color-primary-light);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--space-16);
-  color: var(--color-accent);
+  color: var(--color-primary);
   font-size: 24px;
   transition: transform var(--duration-fast) var(--ease-out), background-color var(--duration-fast);
 }
 
 .industry-icon-wrapper svg {
-  stroke: var(--color-accent) !important;
+  stroke: currentColor !important;
 }
+
+/* Distinct industry icon colors */
+.industry-icon-wrapper.ind-green { background-color: var(--color-primary-light); color: var(--color-primary); }
+.industry-icon-wrapper.ind-gold { background-color: var(--color-gold-light); color: var(--color-gold); }
+.industry-icon-wrapper.ind-blue { background-color: var(--color-blue-light); color: var(--color-blue); }
+.industry-icon-wrapper.ind-purple { background-color: var(--color-purple-light); color: var(--color-purple); }
+.industry-icon-wrapper.ind-teal { background-color: var(--color-teal-light); color: var(--color-teal); }
+.industry-icon-wrapper.ind-red { background-color: #FEF0ED; color: var(--color-accent); }
+.industry-icon-wrapper.ind-pink { background-color: #FCE4E7; color: #E11D48; }
 
 .industry-item:hover .industry-icon-wrapper {
   transform: translateY(-4px);
-  background-color: #F8DCD0;
+  filter: brightness(0.92);
 }
 
 .industry-title {
@@ -1003,9 +1083,10 @@ input, textarea, select {
 .why-number {
   font-size: var(--font-size-h3);
   font-weight: var(--font-weight-bold);
-  color: var(--color-accent-light);
+  color: var(--color-gold);
   margin-bottom: var(--space-12);
   display: block;
+  text-shadow: 0 1px 2px rgba(212, 148, 10, 0.15);
 }
 
 .why-title {
@@ -1298,9 +1379,11 @@ input, textarea, select {
    12. Footer
    ========================================================================== */
 .footer {
-  background-color: #0F1F17;
+  background: linear-gradient(180deg, #0A2818 0%, #0F1F17 50%, #0D1A13 100%);
   color: var(--color-text-inverted);
   padding-top: var(--space-80);
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg, var(--color-primary), var(--color-gold), var(--color-accent)) 1;
 }
 
 .footer-grid {
