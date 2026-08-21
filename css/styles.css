@@ -844,9 +844,14 @@ input, textarea, select {
    7. Product Cards (Akilaah-style feature cards)
    ========================================================================== */
 .products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-24);
+}
+
+.products-grid > .feature-card {
+  width: calc(33.333% - var(--space-24) * 2 / 3);
 }
 
 .feature-card {
@@ -1456,8 +1461,8 @@ input, textarea, select {
     grid-template-columns: 1fr;
   }
 
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .products-grid > .feature-card {
+    width: calc(50% - var(--space-24) / 2);
   }
 
   .industries-grid {
@@ -1492,11 +1497,14 @@ input, textarea, select {
   }
 
   .services-grid,
-  .products-grid,
   .industries-grid,
   .why-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .products-grid > .feature-card {
+    width: 100%;
   }
 
   .footer-grid {
