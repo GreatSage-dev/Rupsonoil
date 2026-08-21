@@ -1,38 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Colors */
+  /* Core Brand Colors (Split-Complementary Color Theory) */
+  /* 1. Forest Green (Agriculture/Trust) */
   --color-primary: #155E32;
   --color-primary-dark: #0B3D1F;
   --color-primary-light: #E8F5EC;
-  --color-primary-subtle: #F0F9F3;
-  --color-primary-vivid: #1A7A42;
+  
+  /* 2. Golden Amber (Refined Oil/Premium) */
+  --color-gold: #D4940A;
+  --color-gold-dark: #A67508;
+  --color-gold-light: #FFF8E7;
+  
+  /* 3. Rust Red (Raw Palm Fruit/Action) */
   --color-accent: #C43C2C;
   --color-accent-dark: #9E2F22;
   --color-accent-light: #FEF0ED;
-  --color-gold: #D4940A;
-  --color-gold-light: #FFF8E7;
-  --color-gold-dark: #A67508;
-  --color-blue: #4F46E5;
-  --color-blue-light: #EEF2FF;
-  --color-purple: #7C3AED;
-  --color-purple-light: #F3E8FF;
-  --color-teal: #0D9488;
-  --color-teal-light: #E6FFFA;
+
+  /* Neutrals */
   --color-bg: #FFFFFF;
   --color-bg-warm: #FFFFFF;
-  --color-bg-green-tint: #FFFFFF;
-  --color-bg-amber-tint: #FFFFFF;
   --color-surface: #FFFFFF;
-  --color-surface-card: #FAFAF7;
   --color-text-primary: #111827;
   --color-text-secondary: #4B5563;
   --color-text-tertiary: #6B7280;
   --color-text-inverted: #FFFFFF;
   --color-border: #E5E7EB;
-  --color-border-subtle: #F3F4F6;
   --color-success: #155E32;
   --color-error: #C43C2C;
+
 
   /* Typography */
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -928,8 +924,8 @@ input, textarea, select {
 }
 
 /* Distinct color palettes for each product/service icon */
-.feature-icon.icon-peach {
-  background-color: #FEF0ED;
+.feature-icon.icon-rust {
+  background-color: var(--color-accent-light);
   color: var(--color-accent);
 }
 .feature-icon.icon-green {
@@ -938,27 +934,7 @@ input, textarea, select {
 }
 .feature-icon.icon-gold {
   background-color: var(--color-gold-light);
-  color: var(--color-gold);
-}
-.feature-icon.icon-purple {
-  background-color: var(--color-purple-light);
-  color: var(--color-purple);
-}
-.feature-icon.icon-pink {
-  background-color: #FCE4E7;
-  color: #E11D48;
-}
-.feature-icon.icon-yellow {
-  background-color: var(--color-gold-light);
   color: var(--color-gold-dark);
-}
-.feature-icon.icon-teal {
-  background-color: var(--color-teal-light);
-  color: var(--color-teal);
-}
-.feature-icon.icon-blue {
-  background-color: var(--color-blue-light);
-  color: var(--color-blue);
 }
 
 .feature-title {
@@ -1025,12 +1001,8 @@ input, textarea, select {
 
 /* Distinct industry icon colors */
 .industry-icon-wrapper.ind-green { background-color: var(--color-primary-light); color: var(--color-primary); }
-.industry-icon-wrapper.ind-gold { background-color: var(--color-gold-light); color: var(--color-gold); }
-.industry-icon-wrapper.ind-blue { background-color: var(--color-blue-light); color: var(--color-blue); }
-.industry-icon-wrapper.ind-purple { background-color: var(--color-purple-light); color: var(--color-purple); }
-.industry-icon-wrapper.ind-teal { background-color: var(--color-teal-light); color: var(--color-teal); }
-.industry-icon-wrapper.ind-red { background-color: #FEF0ED; color: var(--color-accent); }
-.industry-icon-wrapper.ind-pink { background-color: #FCE4E7; color: #E11D48; }
+.industry-icon-wrapper.ind-gold { background-color: var(--color-gold-light); color: var(--color-gold-dark); }
+.industry-icon-wrapper.ind-rust { background-color: var(--color-accent-light); color: var(--color-accent); }
 
 .industry-item:hover .industry-icon-wrapper {
   transform: translateY(-4px);
