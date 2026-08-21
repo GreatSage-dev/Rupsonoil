@@ -763,67 +763,112 @@ input, textarea, select {
 /* ==========================================================================
    6. About Section
    ========================================================================== */
-.about-grid {
+.ciyne-layout-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: var(--space-64);
   align-items: flex-start;
 }
 
-.about-steps {
-  position: relative;
-  padding-left: var(--space-32);
+@media (min-width: 1024px) {
+  .ciyne-layout-grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: var(--space-80);
+  }
 }
 
-.about-step {
+.ciyne-sticky-col {
+  /* No special styles needed here, sticky is on the inner content */
+}
+
+@media (min-width: 1024px) {
+  .ciyne-sticky-content {
+    position: sticky;
+    top: 120px; /* Offset from the top to account for header */
+  }
+}
+
+.ciyne-scroll-col {
+  position: relative;
+}
+
+.ciyne-steps-list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ciyne-steps-list::before {
+  content: '';
+  position: absolute;
+  left: 27px; /* Center of the 54px icon */
+  top: 28px;
+  bottom: 28px;
+  width: 1px;
+  background-color: var(--color-border);
+  z-index: 0;
+}
+
+.ciyne-step {
   position: relative;
   padding-bottom: var(--space-40);
+  z-index: 1;
 }
 
-.about-step:last-child {
+.ciyne-step:last-child {
   padding-bottom: 0;
 }
 
-.about-step::before {
-  content: '';
-  position: absolute;
-  left: -24px;
-  top: 32px;
-  bottom: -8px;
-  width: 2px;
-  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-gold) 100%);
+.ciyne-step-inner {
+  display: flex;
+  gap: var(--space-20);
 }
 
-.about-step:last-child::before {
-  display: none;
-}
-
-.step-number {
-  position: absolute;
-  left: -32px;
-  top: 0;
-  color: var(--color-gold-dark);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-large-body);
-  background-color: var(--color-bg-warm);
-  padding: var(--space-4) 0;
-  transition: transform var(--duration-normal) var(--ease-out), color var(--duration-normal) var(--ease-out);
-}
-
-.step-title {
-  font-size: var(--font-size-h5);
-  margin-bottom: var(--space-8);
-  color: var(--color-text-primary);
-  transition: transform var(--duration-normal) var(--ease-out), color var(--duration-normal) var(--ease-out);
-}
-
-.about-step:hover .step-title {
+.ciyne-step-icon {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   color: var(--color-accent);
-  transform: translateY(-2px);
+  box-shadow: var(--shadow-xs);
+  transition: all var(--duration-fast) var(--ease-out);
 }
 
-.about-step:hover .step-number {
-  transform: translateY(-2px);
+.ciyne-step:hover .ciyne-step-icon {
+  border-color: rgba(40, 200, 64, 0.4);
+  background-color: rgba(40, 200, 64, 0.05);
+}
+
+.ciyne-step-text {
+  padding-top: var(--space-4);
+}
+
+.ciyne-step-label {
+  display: block;
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-8);
+}
+
+.ciyne-step-text h3 {
+  font-size: var(--font-size-large-body);
+  margin-bottom: var(--space-8);
+}
+
+.ciyne-step-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 450px;
 }
 
 .about-image-wrapper {
@@ -1443,9 +1488,7 @@ input, textarea, select {
     justify-content: center;
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
+
 
   .products-grid > .feature-card {
     width: calc(50% - var(--space-24) / 2);
