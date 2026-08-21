@@ -140,49 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =========================================================================
-    // 4. Video Card Stacking Carousel Gallery
+    // 4. Video Stacking Carousel (Disabled - Single video mode active)
     // =========================================================================
-    const card1 = document.getElementById('video-card-1');
-    const card2 = document.getElementById('video-card-2');
-    const video1 = document.getElementById('facility-video-1');
-    const video2 = document.getElementById('facility-video-2');
-    const arrowLeft = document.querySelector('.gallery-arrow-left');
-    const arrowRight = document.querySelector('.gallery-arrow-right');
-    
-    let activeCardNum = 1;
-
-    const swapGalleryCards = (direction) => {
-        if (!card1 || !card2) return;
-
-        if (activeCardNum === 1) {
-            card1.classList.remove('front');
-            card1.classList.add('back');
-            card2.classList.remove('back');
-            card2.classList.add('front');
-            
-            // Pause video 1 if it was playing, keeping its timestamp intact
-            if (video1 && !video1.paused) {
-                video1.pause();
-            }
-            activeCardNum = 2;
-        } else {
-            card2.classList.remove('front');
-            card2.classList.add('back');
-            card1.classList.remove('back');
-            card1.classList.add('front');
-            
-            // Pause video 2 if it was playing, keeping its timestamp intact
-            if (video2 && !video2.paused) {
-                video2.pause();
-            }
-            activeCardNum = 1;
-        }
-    };
-
-    if (arrowLeft && arrowRight) {
-        arrowLeft.addEventListener('click', () => swapGalleryCards('left'));
-        arrowRight.addEventListener('click', () => swapGalleryCards('right'));
-    }
 
 
     // =========================================================================

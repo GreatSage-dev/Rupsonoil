@@ -249,57 +249,25 @@
         </p>
       </div>
 
-      <!-- Gallery Deck wrapper -->
-      <div class="gallery-wrapper reveal reveal-scale">
-        <!-- Bouncing Arrows -->
-        <button type="button" class="gallery-arrow gallery-arrow-left" aria-label="Previous clip">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <button type="button" class="gallery-arrow gallery-arrow-right" aria-label="Next clip">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-
-        <div class="gallery-deck">
-          <!-- Video Clip 1 (Front Card) -->
-          <div id="video-card-1" class="gallery-card video-card front" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-20);">
-            <div style="margin-bottom: var(--space-12); display: flex; align-items: center; justify-content: space-between;">
-              <span style="font-size: 15px; font-weight: var(--font-weight-bold); color: var(--color-primary-dark);">Supply Operations &amp; Logistics</span>
-              <span class="badge-pill" style="font-size: 11px; background: var(--color-primary-light); color: var(--color-primary);">Clip 1</span>
-            </div>
-            <div class="video-wrapper">
-              <div class="video-skeleton">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                <span>Loading Video 1...</span>
-              </div>
-              <video id="facility-video-1" controls preload="metadata" playsinline src="Necessary media/Rupson oil clip 1.mp4">
-                Your browser does not support HTML5 video.
-              </video>
-            </div>
-            <div style="margin-top: var(--space-12); font-size: 12px; color: var(--color-text-tertiary); display: flex; justify-content: space-between;">
-              <span>Rupson Oil Operations</span>
-              <span>Lagos State, Nigeria</span>
-            </div>
+      <!-- Centered Video Player -->
+      <div class="gallery-wrapper reveal reveal-scale" style="max-width: 800px; margin: 0 auto;">
+        <div id="video-card-1" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-20); box-shadow: var(--shadow-md);">
+          <div style="margin-bottom: var(--space-12); display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 15px; font-weight: var(--font-weight-bold); color: var(--color-primary-dark);">Factory Tour &amp; Supply Logistics</span>
+            <span class="badge-pill" style="font-size: 11px; background: var(--color-primary-light); color: var(--color-primary);">Operations Video</span>
           </div>
-
-          <!-- Video Clip 2 (Back Card) -->
-          <div id="video-card-2" class="gallery-card video-card back" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-20);">
-            <div style="margin-bottom: var(--space-12); display: flex; align-items: center; justify-content: space-between;">
-              <span style="font-size: 15px; font-weight: var(--font-weight-bold); color: var(--color-primary-dark);">Derivative Processing &amp; Storage</span>
-              <span class="badge-pill" style="font-size: 11px; background: var(--color-primary-light); color: var(--color-primary);">Clip 2</span>
+          <div class="video-wrapper">
+            <div class="video-skeleton">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Loading Video...</span>
             </div>
-            <div class="video-wrapper">
-              <div class="video-skeleton">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                <span>Loading Video 2...</span>
-              </div>
-              <video id="facility-video-2" controls preload="metadata" playsinline src="Necessary media/Rupson oil clip 2.mp4">
-                Your browser does not support HTML5 video.
-              </video>
-            </div>
-            <div style="margin-top: var(--space-12); font-size: 12px; color: var(--color-text-tertiary); display: flex; justify-content: space-between;">
-              <span>Rupson Oil Processing</span>
-              <span>Lagos State, Nigeria</span>
-            </div>
+            <video id="facility-video" controls preload="metadata" playsinline src="Necessary media/rupsonoil main video.mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div style="margin-top: var(--space-12); font-size: 12px; color: var(--color-text-tertiary); display: flex; justify-content: space-between;">
+            <span>Rupson Oil Nigeria Limited Facilities</span>
+            <span>Lagos State, Nigeria</span>
           </div>
         </div>
       </div>
@@ -673,14 +641,14 @@
             </a>
 
             <!-- Call row -->
-            <a href="tel:09068339694" class="contact-card-row">
+            <a href="tel:07043929883" class="contact-card-row">
               <div class="contact-card-left">
                 <div class="contact-card-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 </div>
                 <div>
                   <div class="contact-card-title">Call us</div>
-                  <div class="contact-card-value">09068339694 &bull; 08036057727</div>
+                  <div class="contact-card-value">07043929883</div>
                 </div>
               </div>
               <div class="contact-card-arrow">
@@ -689,7 +657,7 @@
             </a>
 
             <!-- WhatsApp Row -->
-            <a href="https://wa.me/2349068339694?text=Hello%20Rupson%20Oil%20Nigeria%20Limited%2C%20I%20would%20like%20to%20inquire%20about%20your%20palm%20and%20kernel%20oil%20derivatives." target="_blank" rel="noopener noreferrer" class="contact-card-row">
+            <a href="https://wa.me/2347043929883?text=Hello%20Rupson%20Oil%20Nigeria%20Limited%2C%20I%20would%20like%20to%20inquire%20about%20your%20palm%20and%20kernel%20oil%20derivatives." target="_blank" rel="noopener noreferrer" class="contact-card-row">
               <div class="contact-card-left">
                 <div class="contact-card-icon" style="color: #25D366;">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.176 8.176 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8 2.52 1.1 2.52.73 2.98.69.45-.04 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/></svg>
@@ -835,8 +803,7 @@
           <h4 class="footer-title">Contact</h4>
           <div class="footer-links">
             <span class="footer-link" style="cursor: default;">47B, Ire-Akari Estate Road, Isolo, Lagos.</span>
-            <a href="tel:09068339694" class="footer-link">09068339694</a>
-            <a href="tel:08036057727" class="footer-link">08036057727</a>
+            <a href="tel:07043929883" class="footer-link">07043929883</a>
             <a href="mailto:rupsonoilnl@gmail.com" class="footer-link">rupsonoilnl@gmail.com</a>
           </div>
         </div>
